@@ -1,0 +1,130 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+hr{
+    width: 500px;
+}
+
+#board{
+    width: 448px;
+    height: 448px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    border: 6px solid black;
+    border-radius: 8px;
+    background-color: #cdc1b5;
+    position: relative;
+}
+
+.tile{
+    width: 101px;
+    height: 100px;
+    border-radius: 10px;
+    border: 6px solid #bbada0;
+    /* margin: 0.1px; */
+    font-size: 45px;
+    font-weight: bold;
+    color: #776e65;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 100px;
+    transition: background-color 0.4s, transform 0.4s ease-out;
+    /* can't be move by mouse */
+    pointer-events: none;
+    /* background: linear-gradient(to bottom right, #f3f0ec, #727371); */
+    /* position: absolute; */
+}
+
+/* Add a class for the dragged state */
+.tile.dragged {
+    transform: scale(1.05); /* Adjust the scale for the desired dragging effect */
+}
+
+.x2{
+    background-color: #f3f0ec;
+    color: #727371;
+    /* background: linear-gradient(to bottom right, #f3f0ec, #727371); */
+}
+
+.x4{
+    background-color: #fbe4ba;
+    color: #727371;
+    /* background: linear-gradient(to bottom right, #dfd6c5, #727371); */
+}
+
+.x8{
+    background-color: #e1ac81;
+    color: #727371;
+    /* background: linear-gradient(to bottom right, #e1ac81, #727371); */
+}
+
+.x16{
+    background-color: #f59575;
+    color: white;
+    /* background: linear-gradient(to bottom right, #f59575, white); */
+}
+
+.x32{
+    background-color: #ca573a;
+    color: white;
+    /* background: linear-gradient(to bottom right, #f59575, white); */
+}
+
+.x64{
+    background-color: #fb552f;
+    color: white;
+    /* background: linear-gradient(to bottom right, #f65d3b, white); */
+}
+
+.x128{
+    background-color: #edce71;
+    color: white;
+    /* background: linear-gradient(to bottom right, #edce71, white); */
+}
+
+.x256{
+    background-color: #d7b851;
+    color: white;
+    /* background: linear-gradient(to bottom right, #edcc63, white); */
+}
+
+.x512{
+    background-color: #e9b825;
+    color: white;
+    /* background: linear-gradient(to bottom right, #edc651, white); */
+}
+
+.x1024{
+    background-color: #c29f29;
+    color: white;
+    /* background: linear-gradient(to bottom right, #eec744, white); */
+}
+
+.x2048{
+    background-color: #ac20d7;
+    color: white;
+    /* background: linear-gradient(to bottom right, #ecc230, white); */
+}
+
+.x4096 {
+    background-color: #fe3d3d;
+    color: white;
+    /* background: linear-gradient(to bottom right, #fe3d3d, white); */
+}
+
+.x8192 {
+    background-color: #ff2020;
+    color: white;
+    /* background: linear-gradient(to bottom right, #ff20202, white); */
+}
+
+/* Apply the same transition to other tile classes */
+.x2, .x4, .x8, .x16, .x32, .x64, .x128, .x256, .x512, .x1024, .x2048, .x4096, .x8192 {
+    transition: background-color 0.4s, transform 0.4s ease-out;
+}
