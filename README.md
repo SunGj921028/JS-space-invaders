@@ -1,1 +1,1 @@
-# JS_Game_project
+# A little Javascript game
